@@ -12,7 +12,7 @@ import unittest
 
 import intermix
 
-BASE_ANNOTATION = {'module': '__main__', 'file': 'tests.py', 'plugin': 'intermix-python-plugin', 'plugin_ver': '0.6',
+BASE_ANNOTATION = {'module': '__main__', 'file': 'tests.py', 'plugin': 'intermix-python-plugin', 'plugin_ver': '0.7',
                    'app_ver': 1, 'user': '', 'format': 'intermix', 'version': '1', 'meta': {}}
 
 

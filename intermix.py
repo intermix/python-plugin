@@ -35,7 +35,7 @@ import traceback
 logger = logging.getLogger(__name__)
 
 __PLUGIN_ID__ = 'intermix-python-plugin'
-__VERSION__ = '0.6'
+__VERSION__ = '0.7'
 INTERMIX_RE = re.compile(r"(\s*/\* INTERMIX_ID.*?\*/)")
 
 
@@ -86,7 +86,8 @@ def annotate(sql, app, app_ver, dag, task, user='', meta='', override=True):
                 return sql
             sql = re.sub(INTERMIX_RE, '', sql)
 
-        annotation = "/* INTERMIX_ID: {} */ ".format(base64.b64encode(json.dumps(blob)))
+        # Explicitly encode the JSON string for Python 2/3 compatibility
+        annotation = "/* INTERMIX_ID: {} */ ".format(base64.b64encode(json.dumps(blob).encode()).decode())
         sql = "{}{}".format(annotation, sql)
 
     except:

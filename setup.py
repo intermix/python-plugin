@@ -28,7 +28,7 @@ from setuptools import setup
 def do_setup():
     setup(
         name='intermix',
-        version='0.6',
+        version='0.7',
         description='Plugin to add Intermix annotations to SQL queries',
         py_modules=['intermix'],
         license='MIT License',
@@ -42,6 +42,7 @@ def do_setup():
             'Programming Language :: Python :: 3.4',
             'Programming Language :: Python :: 3.5',
             'Programming Language :: Python :: 3.6',
+            'Programming Language :: Python :: 3.7',
             'Topic :: System :: Monitoring',
         ],
         author='Intermix Software',
